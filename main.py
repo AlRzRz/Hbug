@@ -11,7 +11,7 @@ import uvicorn
 
 app = FastAPI()
 
-# Enable CORS
+#Enable CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Adjust this in production (e.g., ["http://localhost:3000"])
