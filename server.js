@@ -44,7 +44,7 @@ app.post('/api/upload-image', upload.single('image'), (req, res) => {
   }
   
   // Mock AI processing - in a real app, this would call your AI service
-  const productRanks = ['A', 'B', 'C', 'D', 'E', 'F'];
+  const productRanks = ['A', 'B', 'C', 'D', 'F'];
   const randomRank = productRanks[Math.floor(Math.random() * productRanks.length)];
   
   // Calculate reimbursement percentage based on rank
@@ -54,7 +54,6 @@ app.post('/api/upload-image', upload.single('image'), (req, res) => {
     case 'B': reimbursementPercentage = 80; break;
     case 'C': reimbursementPercentage = 60; break;
     case 'D': reimbursementPercentage = 40; break;
-    case 'E': reimbursementPercentage = 20; break;
     case 'F': reimbursementPercentage = 0; break;
     default: reimbursementPercentage = 0;
   }

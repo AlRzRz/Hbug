@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (data.success) {
         // Display results
         rankDisplay.textContent = data.productRank;
-        reimbursementAmount.textContent = `${data.reimbursementPercentage}%`;
+        reimbursementAmount.textContent = `$${data.reimbursementPercentage}`;
         
         // Hide loading screen and show result container
         loadingContainer.classList.add('hidden');
