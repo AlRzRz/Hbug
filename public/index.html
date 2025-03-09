@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Return System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product Return Portal</h1>
+    
+    <div id="return-button-container">
+      <button id="return-product-btn">Return a Product</button>
+    </div>
+    
+    <div id="camera-container" class="hidden">
+      <h2>Take Photos of Your Product</h2>
+      <p>Please take clear photos of your product from all angles</p>
+      
+      <div class="camera-controls">
+        <input type="file" id="camera-input" accept="image/*" style="display: none;">
+        <div class="button-group">
+          <button id="capture-btn">Take Photo</button>
+          <button id="upload-btn">Upload Image</button>
+        </div>
+      </div>
+      
+      <div id="preview-container" class="hidden">
+        <h3>Preview</h3>
+        <img id="preview-image" src="" alt="Preview">
+        <div class="button-group">
+          <button id="retake-btn">Retake</button>
+          <button id="submit-btn" disabled>Submit</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="loading-container" class="hidden">
+      <div class="loading-content">
+        <h2>Analyzing Your Product</h2>
+        <div class="spinner"></div>
+        <p>Our AI is examining your product for wear and tear...</p>
+        <p class="loading-message">This may take a few moments</p>
+      </div>
+    </div>
+    
+    <div id="result-container" class="hidden">
+      <h2>Return Assessment</h2>
+      <p>Based on our analysis, your product has been ranked:</p>
+      <div id="rank-display"></div>
+      <p>Reimbursement amount: <span id="reimbursement-amount"></span></p>
+      
+      <div class="button-group">
+        <button id="accept-btn">Accept</button>
+        <button id="cancel-btn">Cancel</button>
+      </div>
+    </div>
+    
+    <div id="confirmation-container" class="hidden">
+      <h2>Return Confirmed</h2>
+      <p>Your return has been processed successfully.</p>
+      <p>You will receive your reimbursement within 3-5 business days.</p>
+      <button id="back-to-home-btn">Back to Home</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
